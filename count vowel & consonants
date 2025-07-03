@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <ctype.h> // Required for tolower() and isalpha()
+
+// Function to count vowels and consonants
+void countVowelsConsonants(char *str, int *vowels, int *consonants) {
+    *vowels = 0;
+    *consonants = 0;
+    int i = 0;
+    char ch;
+
+    while (str[i] != '\0') {
+        ch = tolower(str[i]); // Convert to lowercase for case-insensitive check
+
+        if (isalpha(ch)) { // Check if the character is an alphabet
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                (*vowels)++;
+            } else {
+                (*consonants)++;
+            }
+        }
+        i++;
+    }
+}
+
+int main() {
+    char str[100];
+    int numVowels, numConsonants;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); // Read string including spaces
+
+    // Call the function to count vowels and consonants
+    countVowelsConsonants(str, &numVowels, &numConsonants);
+
+    printf("Number of Vowels: %d\n", numVowels);
+    printf("Number of Consonants: %d\n", numConsonants);
+
+    return 0;
+}
