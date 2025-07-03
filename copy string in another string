@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100];
+    printf("enter the string:");
+    scanf("%s",str);
+     char ch[150];
+     
+    strcpy(ch,str);
+    printf("result %s",ch);
+    return 0;
+}
