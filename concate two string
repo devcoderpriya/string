@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100];
+    printf("enter the string:");
+    scanf("%s",str);
+    char ptr[100];
+    printf("enter the string:");
+    scanf("%s",ptr);
+    strcat(str,ptr);
+    printf("%s",str);
+    return 0;
+}
