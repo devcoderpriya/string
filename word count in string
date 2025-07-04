@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char ch[100];
+    printf("enter the string:");
+    fgets(ch, sizeof(ch), stdin);
+    int i,wordcount=1;
+    for(i=0;ch[i]!= '\0';i++)
+    {
+     if(ch[i]==' '){
+        wordcount++;
+     }
+    }
+    printf("%d",wordcount);
+
+    return 0;
+}
